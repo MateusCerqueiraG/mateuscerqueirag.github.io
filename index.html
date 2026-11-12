@@ -163,7 +163,7 @@
   .sub{color:var(--muted);max-width:66ch;margin:-14px 0 30px;font-size:16px}
 
   /* sobre */
-  .sobre p{max-width:68ch;font-size:17px;color:#c7c7d8}
+  .sobre p{max-width:60ch;font-size:18.5px;line-height:1.66;color:#cdcdde}
   .sobre p b{color:var(--yellow);font-weight:600}
   .sobre-grid{display:grid;grid-template-columns:270px 1fr;gap:34px;align-items:start}
   @media(max-width:720px){.sobre-grid{grid-template-columns:1fr;gap:22px}.pfp{max-width:240px}}
@@ -177,7 +177,8 @@
   .fact .l{font-size:12.5px;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:1px;font-family:var(--mono)}
 
   /* arsenal */
-  .arsenal{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .arsenal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  @media(max-width:620px){.arsenal{grid-template-columns:1fr}}
   .ars{border:1px solid var(--line);background:linear-gradient(180deg,var(--panel),transparent);padding:26px 24px}
   .ars h4{font-family:var(--mono);font-size:14.5px;letter-spacing:1.5px;color:var(--magenta);margin:0 0 18px;text-transform:uppercase}
   .chips{display:flex;flex-wrap:wrap;gap:10px}
@@ -275,10 +276,10 @@
       <p>QA Tester com atuação profissional em garantia da qualidade de aplicações <b>Web, API e Mobile</b>, sobre sistemas reais em produção para clientes do setor público e do Sistema S. Mapeio regras de negócio, escrevo e executo casos de teste, automatizo em <b>Python e Java</b>, e vou além do funcional: segurança (OWASP/IDOR), carga, privacidade (LGPD) e acessibilidade (WCAG). Formado em Análise e Desenvolvimento de Sistemas.</p>
     </div>
     <div class="facts">
-      <div class="fact"><div class="n">6</div><div class="l">projetos no GitHub</div></div>
-      <div class="fact"><div class="n">Web·API</div><div class="l">+ Mobile</div></div>
-      <div class="fact"><div class="n">CI/CD</div><div class="l">pipelines verdes</div></div>
-      <div class="fact"><div class="n">BDD</div><div class="l">Gherkin</div></div>
+      <div class="fact"><div class="n">E2E</div><div class="l">Web · API · Mobile</div></div>
+      <div class="fact"><div class="n">PY·JAVA</div><div class="l">automação de testes</div></div>
+      <div class="fact"><div class="n">CI/CD</div><div class="l">pipelines verdes · BDD</div></div>
+      <div class="fact"><div class="n">SEC</div><div class="l">OWASP · LGPD · WCAG</div></div>
     </div>
     <div class="band edge" id="band" style="margin-top:32px">
       <svg class="edge-shark" viewBox="0 0 340 200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -328,8 +329,8 @@
 <section id="projetos" class="reveal">
   <div class="wrap">
     <p class="eyebrow">// 03 <span class="c">—</span> PROJETOS</p>
-    <h2>Seis projetos, seis provas</h2>
-    <p class="sub">Cada repositório roda em CI com relatório ao vivo. Alvos públicos de demonstração — nenhum sistema privado.</p>
+    <h2>Automação que se prova rodando</h2>
+    <p class="sub">Não é só código parado: cada repositório <b>executa em CI/CD</b> a cada push e publica <b>relatório ao vivo</b> da execução. Alvos públicos de demonstração — nenhum sistema privado exposto.</p>
     <div class="grid">
 
       <article class="card">
