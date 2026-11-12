@@ -221,6 +221,10 @@
 
   footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:1px}
   footer .y{color:var(--yellow)}
+  #toTop{position:fixed;right:22px;bottom:22px;z-index:200;width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:15px;font-weight:800;text-decoration:none;background:var(--yellow);color:#0b0b02;border:2px solid #0b0b02;box-shadow:0 0 18px rgba(252,238,10,.4);opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s,transform .2s,visibility .2s}
+  #toTop.show{opacity:1;visibility:visible;transform:none}
+  #toTop:hover{background:#fff53d;box-shadow:0 0 26px rgba(252,238,10,.6);transform:translateY(-2px)}
+  @media(max-width:560px){#toTop{right:14px;bottom:14px;width:42px;height:42px}}
 
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;scroll-behavior:auto}
@@ -230,7 +234,7 @@
   .reveal.in{opacity:1;transform:none}
 </style>
 
-<nav>
+<nav id="top">
   <div class="brand">MC_<b>//QA</b></div>
   <div class="navlinks">
     <a href="#sobre">Sobre</a>
@@ -422,6 +426,8 @@
   <div class="wrap">&copy; Mateus Cerqueira · QA Tester · <span style="color:var(--cyan)">built in the dark</span></div>
 </footer>
 
+<a href="#top" id="toTop" aria-label="Voltar ao topo" title="Voltar ao topo">&#9650;</a>
+
 <script>
   (function(){
     if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -461,6 +467,18 @@
         i++; setTimeout(step,300);
       } else { setTimeout(function(){i=0;step();},3400); }
     })();
+  })();
+
+  /* botão voltar ao topo */
+  (function(){
+    var b=document.getElementById('toTop'); if(!b) return;
+    function onScroll(){ if(window.pageYOffset>520) b.classList.add('show'); else b.classList.remove('show'); }
+    window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+    b.addEventListener('click',function(e){
+      e.preventDefault();
+      var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+    });
   })();
 </script>
 
