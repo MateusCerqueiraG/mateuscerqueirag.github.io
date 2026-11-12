@@ -24,9 +24,9 @@
 <body>
 <style>
   :root{
-    --void:#08070c; --panel:#0f0e17; --panel2:#13121e;
+    --void:#08070c; --panel:#171330; --panel2:#201b3d;
     --yellow:#fcee0a; --cyan:#16e0e8; --magenta:#ff2e88; --green:#2fd24a; --acid:#ecf000;
-    --text:#e9e9f3; --muted:#9a9abb; --line:#2c2945; --line2:#433f63;
+    --text:#f1f1f8; --muted:#a8a8c8; --line:#2a2740; --line2:#524d7c;
     --mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,"Liberation Mono",monospace;
     --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,Arial,sans-serif;
   }
@@ -181,7 +181,7 @@
   /* arsenal */
   .arsenal{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
   @media(max-width:620px){.arsenal{grid-template-columns:1fr}}
-  .ars{border:1px solid var(--line2);background:var(--panel2);padding:26px 24px;box-shadow:inset 0 1px 0 rgba(255,255,255,.03)}
+  .ars{border:1px solid var(--line2);border-top:3px solid var(--yellow);background:var(--panel2);padding:24px 24px 26px;box-shadow:0 0 22px rgba(0,0,0,.35)}
   .ars h4{font-family:var(--mono);font-size:15px;font-weight:700;letter-spacing:1.5px;color:var(--magenta);margin:0 0 18px;text-transform:uppercase;text-shadow:0 0 14px rgba(255,46,136,.35)}
   .chips{display:flex;flex-wrap:wrap;gap:10px}
   .chip{font-family:var(--mono);font-size:14px;color:#ececf6;border:1px solid #4b4770;padding:9px 15px;background:#201d36;transition:.15s}
@@ -189,9 +189,9 @@
 
   /* projetos */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:18px}
-  .card{position:relative;border:1px solid var(--line2);background:var(--panel2);padding:22px 22px 20px;display:flex;flex-direction:column;gap:12px;transition:.18s;overflow:hidden}
-  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--yellow);opacity:.0;transition:.18s}
-  .card:hover{border-color:var(--line2);transform:translateY(-3px);box-shadow:0 10px 40px rgba(0,0,0,.5)}
+  .card{position:relative;border:1px solid var(--line2);background:var(--panel2);padding:22px 22px 20px 25px;display:flex;flex-direction:column;gap:12px;transition:.18s;overflow:hidden;box-shadow:0 0 22px rgba(0,0,0,.35)}
+  .card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--yellow);opacity:.85;transition:.18s}
+  .card:hover{border-color:var(--line2);transform:translateY(-3px);box-shadow:0 12px 44px rgba(0,0,0,.55)}
   .card:hover::before{opacity:1;box-shadow:0 0 18px var(--yellow)}
   .card .idx{font-family:var(--mono);font-size:12.5px;font-weight:700;color:var(--cyan);letter-spacing:1px}
   .card h3{font-family:var(--mono);font-size:17px;margin:0;letter-spacing:.3px;color:var(--text)}
